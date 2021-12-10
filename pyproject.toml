@@ -5,7 +5,8 @@ description = ""
 authors = ["Antoine Montes <antoine.montes@epita.fr>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "3.7"
+numpy = "^1.21.4"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.6.0"
