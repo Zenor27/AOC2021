@@ -8,6 +8,10 @@ class LibIterable:
         return list(zip_longest(*args, fillvalue=fillvalue))
 
     @staticmethod
+    def transpose(iterable):
+        return list(zip(*iterable))
+
+    @staticmethod
     def sliding_grouper(iterable, n):
         res = []
         for i in range(len(iterable) - n + 1):

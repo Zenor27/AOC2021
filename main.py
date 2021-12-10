@@ -1,4 +1,4 @@
-from d3.day_3 import day_3
+from d4.day_4 import day_4
 
 if __name__ == '__main__':
-    print(day_3())
+    print(day_4())
