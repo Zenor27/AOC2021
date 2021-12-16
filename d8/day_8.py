@@ -1,4 +1,5 @@
 from collections import Counter
+from lib.lib_check import LibCheck
 from lib.lib_file import LibFile
 from lib.lib_bench import LibBench
 
@@ -98,9 +99,12 @@ def deduce_signals(known_signals: dict[int, str], possible_signals: dict[int, li
     remove_known_signals_from_possible_signals(known_signals, possible_signals)
 
 
-@LibBench.bench
-def day_8():
-    file_lines = LibFile.read_lines("d8/input.txt")
+input_files_and_results = [("d8/simple_example.txt", 5353),
+                           ("d8/example.txt", 61229), ("d8/input.txt", 968175)]
+
+
+@LibCheck.check(input_files_and_results=input_files_and_results, input_parse_func=LibFile.read_lines)
+def day_8(file_lines: list[str]):
     res = 0
     for file_line in file_lines:
         signal, results = get_signal_and_results(file_line)
