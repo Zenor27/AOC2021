@@ -1,4 +1,4 @@
-from d8.day_8 import day_8 as day_func
+from d9.day_9 import day_9 as day_func
 
 if __name__ == '__main__':
     day_func()
